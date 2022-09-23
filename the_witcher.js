@@ -1,64 +1,93 @@
-// Characters
-
 const characters = [
     {
         name: 'Geralt of Rivia',
-        occupation: 'witcher',
+        occupation: 'hunt monsters',
         trait: 'just',
         src: 'https://cosplaytime.pl/uploads/2019/12/0uy51Pg6ESThY.jpg'
     },
     {
         name: 'Yennefer of Vengerberg',
-        occupation: 'sorceress',
+        occupation: 'cast spells',
         trait: 'cunning',
-        src: 'https://images.gram.pl/news/embed/scct20210813195808159oyqz.jpg'
+        src: 'https://i.pinimg.com/originals/4f/70/d3/4f70d320d10c7a504b304231b874cd10.jpg'
     },
     {
         name: 'Triss Merigold',
-        occupation: 'sorceress',
+        occupation: 'cast spells',
         trait: 'caring',
         src: 'https://gfx.gexe.pl/2015/6/18/195303.1434649983.jpg'
     },
     {
         name: 'Cirilla of Cintra',
-        occupation: 'witcher',
+        occupation: 'hunt monsters',
         trait: 'courageous',
         src: 'https://d-art.ppstatic.pl/kadry/k/r/e7/88/5ce106e75b176_o_full.jpg'
     },
     {
         name: 'Jaskier',
-        occupation: 'bard',
+        occupation: 'write songs',
         trait: 'loyal',
         src: 'https://planetagracza.pl/wp-content/uploads/2021/05/wiedzmin-3-jaskier-modyfikacja.jpg'
     },
     {
         name: 'Emhyr var Emreis',
-        occupation: 'emperor of Nilfgaard',
+        occupation: 'rule Nilfgaard',
         trait: 'self-interested',
-        src: 'https://www.google.com/search?q=emhyr+var+emreis+wiedzmin+3&tbm=isch&ved=2ahUKEwignOjgtpT6AhUkCBAIHdMPA_QQ2-cCegQIABAA&oq=emhyr+var+emreis+wiedzmin+3&gs_lcp=CgNpbWcQAzoFCAAQgAQ6CAgAEB4QBxAFOgYIABAeEAc6CAgAEB4QCBAHOgYIABAeEAhQxwRY8xFghhNoAHAAeACAAdIBiAH-EpIBBjIuMTQuMZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=UtwhY6CrH6SQwPAP05-MoA8&bih=714&biw=1536#imgrc=G6P0z4m8t5nQSM'
+        src: 'https://pbs.twimg.com/media/Bsggq4GIcAANcV7.jpg:large'
     },
     {
         name: 'Foltest',
-        occupation: 'king of Temeria',
+        occupation: 'rule Temeria',
         trait: 'secretive',
-        src: 'https://www.google.com/search?q=foltest+wiedzmin+3&tbm=isch&ved=2ahUKEwjPqMbxtpT6AhWyl4sKHfeNCh0Q2-cCegQIABAA&oq=foltest+wiedzmin+3&gs_lcp=CgNpbWcQA1CeBVjlC2ChDWgAcAB4AYABhQSIAbQLkgELNS4wLjEuMS4wLjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=ddwhY4-aJbKvrgT3m6roAQ&bih=714&biw=1536#imgrc=Tdcwf4Zzc--JNM'
+        src: 'https://www.gamelivestory.com/images/article/the-witcher-10-hidden-details-you-never-noticed-about-foltest-article-image2.webp'
     },
     {
         name: 'Milva Barring',
-        occupation: 'archer',
+        occupation: 'shoot a bow masterfully',
         trait: 'determined',
-        src: 'https://static.wikia.nocookie.net/wiedzmin/images/7/72/W3_SS_Milva_Gwint.png/revision/latest?cb=20170826071447'
+        src: 'https://64.media.tumblr.com/398ce4c2c572bb298474dcb5fd2968f8/e50b51bea2f8e409-2d/s1280x1920/edac1769b857ff3b06b8fa2801dbf12718d0f8c9.png'
     },
     {
         name: 'Cahir',
-        occupation: 'Nilfgaardian knight',
+        occupation: 'help Geralt on his quest',
         trait: 'honourable',
-        src: 'https://www.google.com/search?q=cahir+wiedzmin+3&tbm=isch&ved=2ahUKEwjhqoGJt5T6AhUQx4sKHRxCB0gQ2-cCegQIABAA&oq=cahir+wiedzmin+3&gs_lcp=CgNpbWcQAzoGCAAQHhAHOggIABAeEAcQBVDUAli7BmC2B2gAcAB4AIABS4gBnQOSAQE2mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=ptwhY-G_MZCOrwSchJ3ABA&bih=714&biw=1536#imgrc=raoHM6lPH04dmM'
+        src: 'https://i.ytimg.com/vi/O3hcd5vCX-4/maxresdefault.jpg'
     },
     {
         name: 'Emiel Regis',
-        occupation: 'vampire',
+        occupation: 'know the arcanes of potion-brewing',
         trait: 'wise',
-        src: 'https://fwcdn.pl/fcp/90/50/739050/17189.1.jpg'
+        src: 'https://external-preview.redd.it/IS3TlZwN73CauEyAxj0y1ZezK_IcKNLlmfYbDRuMBsI.jpg?auto=webp&s=39f3dad0b1edfeccfc530f24b0aa7731d0b5d5b1'
     }
-]
+];
+
+function getRandomInt() {
+    const min = 1;
+    const max = characters.length + 1;
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+const createImagesAndMessages = (index, message) => {
+    let imgEl = document.querySelector('img');
+    const src = characters[index].src;
+    if (imgEl) {
+        imgEl.src = src;
+        
+    } else {
+        imgEl = document.createElement('img');
+        imgEl.src = src;
+    }
+    document.querySelector("span").innerText = message;
+    document.body.appendChild(imgEl);
+    imgEl.classList.add('image');
+}
+
+
+const returnRandomCharacter = (event) => {
+    let index = getRandomInt() - 1;
+    const message = `Your name is ${characters[index].name}, you ${characters[index].occupation} and you are ${characters[index].trait}!`;
+    createImagesAndMessages(index, message);
+};
+
+
+document.querySelector("button").addEventListener("click", returnRandomCharacter);
