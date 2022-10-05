@@ -5,21 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS exercises</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Mukta:wght@200&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1 id="greeting"></h1>
-     <input type="text" id="input" class="Input-text" placeholder="Insert your first name here...">
-    <button type="button" id="save-btn">Save</button>
-    <h2 id="instruction">
-    Feel free to browse through the list of my JavaScript demos:
-    </h1>
-    <ol class="list">
-    <li><a href="the-witcher/the-witcher.html">Which 'The Witcher' character are you?</a></li>
-    </ul>
-    <script src="localStorageHandler.js"></script>
+
+    <h1>Which 'The Witcher' character are you?</h1>
+    <button id="back"><a href="/index.html">Go back</a></button>
+
+    <button id="witcher-button">Press to find out!</button>
+    <ul class="gallery"></ul>
+    <span></span>
+
+    <script src="the_witcher.js"></script>
+    <script src="main.js"></script>
+    
   </body>
 </html>
