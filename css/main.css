@@ -1,3 +1,9 @@
+:root {
+  --main-font: 'Quattrocento', serif;
+  --sec-font: 'Quattrocento Sans', sans-serif;
+  --dark: #000;
+}
+
 body {
   background: rgb(131, 58, 180);
   background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgba(253, 29, 29, 0.3393732493) 50%, rgb(252, 176, 69) 100%);
@@ -11,18 +17,18 @@ span, h1 {
 }
 
 h1 {
-  font-family: "MedievalSharp", cursive;
+  font-family: var(--main-font);
   font-size: 43px;
 }
 
 #instruction {
-    font-family: "MedievalSharp", cursive;
+    font-family: var(--main-font);
   font-size: 35px;
   text-align: center;
 }
 
 span {
-  font-family: "Mukta", sans-serif;
+  font-family: var(--sec-font);
   font-size: 40px;
 }
 
@@ -35,8 +41,8 @@ ol {
   
   li::marker {
     content: counter(list-item);
-    font-family: "MedievalSharp", "Mukta", sans-serif;
-    font-size: 3em;
+    font-family: var(--main-font), var(--sec-font);;
+    font-size: 2em;
     color: var(--marker-color);
     text-align: center;
   }
@@ -47,7 +53,7 @@ a {
 }
 
 ol a {
-  font-family: "Mukta", sans-serif;
+  font-family: var(--sec-font);;
   font-size: 1.5rem;
 }
 
@@ -73,7 +79,7 @@ button {
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  font-family: "MedievalSharp", cursive;
+  font-family: var(--main-font);
   background-image: linear-gradient(to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
   box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
   display: block;
@@ -124,7 +130,7 @@ left: 8%;
   width: 30%;
   height: 50px;
   margin: 0 auto;
-  font-family: "Mukta", sans-serif;
+  font-family: var(--sec-font);;
   font-size: 1rem;
   border: none;
   border-radius: 1.4rem;

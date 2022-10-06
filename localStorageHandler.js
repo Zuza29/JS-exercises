@@ -21,6 +21,6 @@ function clearInput () {
 saveBtn.addEventListener("click", () => {
     let inputValue = input.value;
     localStorage.setItem("username", inputValue);
-    greeting.innerHTML = `Welcome, ${inputValue}`;
+    inputValue ? greeting.innerHTML = `Welcome, ${inputValue}` : 'Welcome, Stranger';
     clearInput();
 })
