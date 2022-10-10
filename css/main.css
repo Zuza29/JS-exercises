@@ -168,4 +168,24 @@ left: 8%;
     height: 6vh;
 } }
 
+#date-div, #clock, #message {
+  font-family: var(--sec-font);
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 7rem;
+}
+
+#date-div {
+  margin-top: 150px;
+}
+
+#clock {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+
+
+
 
