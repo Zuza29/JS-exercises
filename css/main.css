@@ -1,10 +1,5 @@
-:root {
-  --main-font: 'Quattrocento', serif;
-  --sec-font: 'Quattrocento Sans', sans-serif;
-  --dark: #000;
-}
-
 body {
+  font-family: 'Montserrat', sans-serif;
   background: rgb(131, 58, 180);
   background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgba(253, 29, 29, 0.3393732493) 50%, rgb(252, 176, 69) 100%);
 }
@@ -20,62 +15,72 @@ body {
 span, h1 {
   display: block;
   text-align: center;
-
 }
 
 h1 {
-  font-family: var(--main-font);
-  font-size: 43px;
+  font-size: 2.5rem;
   margin-top: 150px;
+  margin-bottom: 50px;
 }
 
+
 #instruction {
-    font-family: var(--main-font);
-  font-size: 35px;
-  text-align: center;
+  font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    margin: 70px 0;
 }
 
 span {
-  font-family: var(--sec-font);
   font-size: 4vh;
+  margin: 40px auto;
 }
+
 
 ol {
-  --marker-color: #000; 
-      text-align: center;
-    width: 55%;
     margin: 0 auto;
 }
-  
-  li::marker {
-    content: counter(list-item);
-    font-family: var(--main-font), var(--sec-font);;
-    font-size: 2em;
-    color: var(--marker-color);
-    text-align: center;
-  }
-
 
 a {
   text-decoration: none;
 }
 
 ol a {
-  font-family: var(--sec-font);;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  padding-left: 70px;
+  margin: 50% auto;
+  color: rgb(131, 58, 180);
+}
+
+ol a:hover {
+  color: rgba(116, 10, 168);
+}
+
+ol a:active {
+  color:rgb(131, 100, 180)
+}
+
+li {
+  margin: 40px 0;
+}
+
+li::marker {
+  font-size: 2rem;
 }
 
 #back a {
-
 color: #fff;
+padding: 30px;
 }
 
 button {
+  font-family: 'Montserrat', sans-serif;
   display: block;
   margin: 10px auto;
-  width: 26vh;
+  width: 30vh;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 300;
   color: #fff;
   cursor: pointer;
   height: 70px;
@@ -87,7 +92,6 @@ button {
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  font-family: var(--main-font);
   background-image: linear-gradient(to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
   box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
 }
@@ -103,24 +107,25 @@ button:hover {
 #back {
   display: inline;
   position: absolute;
-left: 8%;
-    top: 11.5%;
-  width: 100px;
+left: 4%;
+    top: 4%;
+  width: 25vh;
     height: 55px;
 }
 
 
 .image {
-  width: 1000px;
+  max-width: 1000px;
   object-fit: contain;
   display: block;
   margin: 0 auto;
   max-height: 400px;
   transition: transform 0.4s;
+  margin-bottom: 50px;
 }
 
 .image:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .Input {
@@ -130,19 +135,21 @@ left: 8%;
 
 .Input-text {
   display: block;
-  padding-left: 20px;
+  padding: 25px 0;
+  padding-left: 30px;
   width: 100%;
-  height: 50px;
-  font-family: var(--sec-font);;
-  font-size: 1rem;
+  font-size: 1.5rem;
   border: none;
   border-radius: 1.4rem;
   margin: 50px auto;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 .Input-text::placeholder {
   color: #B0BEC5;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .Input-text:focus {
@@ -169,11 +176,10 @@ left: 8%;
 } }
 
 #date-div, #clock, #message {
-  font-family: var(--sec-font);
   text-align: center;
   font-size: 3rem;
   font-weight: 300;
-  line-height: 7rem;
+  line-height: 100px;
 }
 
 #date-div {

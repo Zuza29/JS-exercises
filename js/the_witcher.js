@@ -39,7 +39,7 @@ const characters = [
         name: 'Foltest',
         occupation: 'rule Temeria',
         trait: 'secretive',
-        src: 'https://www.gamelivestory.com/images/article/the-witcher-10-hidden-details-you-never-noticed-about-foltest-article-image2.webp'
+        src: 'https://preview.redd.it/igwnopegwa251.png?auto=webp&s=f34116896f7aa29b04d16c815dad909d6c8330fc'
     },
     {
         name: 'Milva Barring',
