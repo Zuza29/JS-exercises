@@ -1,79 +1,104 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: rgb(131, 58, 180);
   background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgba(253, 29, 29, 0.3393732493) 50%, rgb(252, 176, 69) 100%);
 }
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    max-width: 70%;
-    margin: 0 auto;
-    padding: 15px;
-  }
-
-span, h1 {
-  display: block;
-  text-align: center;
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 15px;
 }
 
 h1 {
   font-size: 2.5rem;
   margin-top: 150px;
   margin-bottom: 50px;
-}
-
-
-#instruction {
-  font-size: 1.5rem;
-    text-align: center;
-    letter-spacing: 1.5px;
-    line-height: 30px;
-    margin: 70px 0;
+  text-align: center;
+  display: block;
 }
 
 span {
+  display: block;
   font-size: 4vh;
   margin: 40px auto;
+  text-align: center;
 }
 
-
 ol {
-    margin: 0 auto;
+  margin: 0 auto;
+}
+ol a {
+  font-size: 1.7rem;
+  color: rgb(131, 58, 180);
+}
+ol a:hover {
+  color: rgb(116, 10, 168);
+}
+ol a:active {
+  color: rgb(131, 100, 180);
 }
 
 a {
   text-decoration: none;
 }
 
-ol a {
-  font-size: 1.7rem;
-  color: rgb(131, 58, 180);
-}
-
-ol a:hover {
-  color: rgba(116, 10, 168);
-}
-
-ol a:active {
-  color:rgb(131, 100, 180)
-}
-
 li {
   margin: 40px 0;
 }
-
 li::marker {
   font-size: 2rem;
 }
 
-#back a {
-color: #fff;
-padding: 30px;
+.input {
+  position: relative;
+}
+
+.input-text {
+  display: block;
+  padding: 25px 0;
+  padding-left: 30px;
+  width: 100%;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 1.4rem;
+  margin: 50px auto;
+  font-family: "Montserrat", sans-serif;
+}
+.input-text::placeholder {
+  color: #b0bec5;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.input-text:focus {
+  outline: none;
+  box-shadow: 0.2rem 0.8rem 1.6rem var(--dark);
+}
+
+#date-div, #clock, #message {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 100px;
+}
+
+#date-div {
+  margin-top: 150px;
+}
+
+#clock {
+  font-size: 3.5rem;
+  font-weight: 700;
 }
 
 button {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: block;
   margin: 10px auto;
   width: 30vh;
@@ -93,7 +118,6 @@ button {
   background-image: linear-gradient(to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
   box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
 }
-
 button:hover {
   background-position: 100% 0;
   -moz-transition: all 0.4s ease-in-out;
@@ -102,15 +126,97 @@ button:hover {
   transition: all 0.4s ease-in-out;
 }
 
+#instruction {
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 1.5px;
+  line-height: 30px;
+  margin: 70px 0;
+}
+
 #back {
   display: inline;
   position: absolute;
-left: 4%;
-    top: 4%;
+  left: 4%;
+  top: 4%;
   width: 25vh;
-    height: 55px;
+  height: 55px;
+}
+#back a {
+  color: #fff;
+  padding: 30px;
 }
 
+.container.game.buttons {
+  display: none;
+}
+.container.game.buttons button {
+  width: 20vh;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  transition: 0.6s;
+}
+
+.item1 {
+  height: 0;
+  background-image: url("https://th.bing.com/th/id/R.a8c8da654ee358c95b69a1ef63dd0255?rik=vGGxuThwJFhKIw&pid=ImgRaw&r=0");
+}
+
+.item2 {
+  height: 300px;
+  background-image: url("https://th.bing.com/th/id/R.138a4990b64223793fef9d683093eac5?rik=2fINvu2blC214A&pid=ImgRaw&r=0");
+  background-position: center;
+}
+
+.show {
+  height: 300px;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+  background-image: url("/svg/down-arrow-5.svg");
+  width: 7vh;
+  height: 7vh;
+  margin: 0 auto;
+  transition: transform 0.6s;
+}
+
+.plus-img,
+.minus-img {
+  width: 5vh;
+  height: 5vh;
+  margin: 0 auto;
+}
+
+.plus-img {
+  background-image: url("/svg/plus.svg");
+  fill: white;
+}
+
+.minus-img {
+  background-image: url("/svg/minus.svg");
+}
+
+.container.game {
+  margin-top: 22vh;
+}
+.container.game section {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
 
 .image {
   max-width: 1000px;
@@ -121,123 +227,25 @@ left: 4%;
   transition: transform 0.4s;
   margin-bottom: 50px;
 }
-
 .image:hover {
   transform: scale(1.1);
 }
 
-.Input {
-  position: relative;
- 
-}
-
-.Input-text {
-  display: block;
-  padding: 25px 0;
-  padding-left: 30px;
-  width: 100%;
-  font-size: 1.5rem;
-  border: none;
-  border-radius: 1.4rem;
-  margin: 50px auto;
-    font-family: 'Montserrat', sans-serif;
-
-}
-
-.Input-text::placeholder {
-  color: #B0BEC5;
-  font-size: 1.2rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.Input-text:focus {
-  outline: none;
-  box-shadow: 0.2rem 0.8rem 1.6rem var(--dark);
-}
-
-
 @media screen and (min-width: 320px) and (max-width: 1026px) {
-
-
   .image {
     max-width: 80%;
   }
 }
-
 @media screen and (min-width: 320px) and (max-width: 768px) {
-
-#back {
-      left: 7%;
+  #back {
+    left: 7%;
     top: 5.5%;
-     width: 32vh;
+    width: 32vh;
     height: 14vh;
     font-size: 2em;
     padding: 0;
-} }
-
-#date-div, #clock, #message {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 300;
-  line-height: 100px;
-}
-
-#date-div {
-  margin-top: 150px;
-}
-
-#clock {
-  font-size: 3.5rem;
-  font-weight: 700;
-}
-
-/* Game */
-
-.item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background-size: cover;
-  transition: .6s;
-}
-
-.item1 {
-  height: 40px;
-  background-image: url('https://th.bing.com/th/id/R.a8c8da654ee358c95b69a1ef63dd0255?rik=vGGxuThwJFhKIw&pid=ImgRaw&r=0');
-}
-
-.item2 {
-  height: 300px;
-  background-image: url('https://th.bing.com/th/id/R.138a4990b64223793fef9d683093eac5?rik=2fINvu2blC214A&pid=ImgRaw&r=0');
-  background-position: center;
-}
-
-.hide {
-  height: 300px;
-}
-
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .2);
-}
-
-section {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.arrow {
-  transition: transform .6s;
-  background-image: url('/svg/down-arrow-5.svg');
-  width: 9vh;
-    height: 9vh;
-    margin: 0 auto;
-}
-
-.container.game {
-  margin-top: 22vh;
-}
+  }
+  .container.game section {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=main.css.map */

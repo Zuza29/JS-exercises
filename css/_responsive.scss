@@ -1,0 +1,20 @@
+@media screen and (min-width: 320px) and (max-width: 1026px) {
+  .image {
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  #back {
+    left: 7%;
+    top: 5.5%;
+    width: 32vh;
+    height: 14vh;
+    font-size: 2em;
+    padding: 0;
+  }
+
+  .container.game section {
+    flex-direction: column;
+  }
+}
