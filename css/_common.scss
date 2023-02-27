@@ -21,19 +21,35 @@ body {
   padding: 15px;
 }
 
+.container.subpage {
+  margin-top: 15vh;
+  & section {
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+  }
+}
+
+h1, h2, h3, span {
+   text-align: center;
+}
+
 h1 {
   font-size: 2.5rem;
   margin-top: 150px;
   margin-bottom: 50px;
-  text-align: center;
   display: block;
+}
+
+h2 {
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 span {
   display: block;
   font-size: 4vh;
   margin: 40px auto;
-  text-align: center;
 }
 
 ol {
@@ -63,9 +79,6 @@ li {
 
 .input {
   position: relative;
-}
-
-.input-text {
   display: block;
   padding: 25px 0;
   padding-left: 30px;
@@ -85,3 +98,4 @@ li {
     box-shadow: 0.2rem 0.8rem 1.6rem var(--dark);
   }
 }
+
