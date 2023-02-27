@@ -34,13 +34,12 @@ const currentTime = () => {
     let time = hh + ":" + mm + ":" + ss;
     document.getElementById("clock").innerHTML = time;
     document.getElementById("message").innerHTML = msg;
-    const timeUpdate = setTimeout(() => {currentTime()}, 1000);
 };
 
 const currentDate = () => {
     let date = new Date();
     let display =
-        date.getDate() + " " + months[date.getMonth() + 1] + " " + date.getFullYear();
+        date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear();
     document.getElementById("date-div").innerHTML = "Today is " + display;
 };
 
