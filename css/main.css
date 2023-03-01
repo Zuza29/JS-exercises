@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css?family=PT+Mono";
 html {
   scroll-behavior: smooth;
 }
@@ -38,6 +39,7 @@ h1 {
 
 h2 {
   text-transform: uppercase;
+  margin-top: 40px;
   margin-bottom: 5px;
 }
 
@@ -94,6 +96,34 @@ li::marker {
   box-shadow: 0.2rem 0.8rem 1.6rem var(--dark);
 }
 
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-100px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
 #date-div, #clock, #message {
   text-align: center;
   font-size: 3rem;
@@ -240,6 +270,70 @@ button:hover {
   font-size: 1.5em;
   padding: 15px 0;
   border-radius: 10px;
+}
+
+.box {
+  width: 90%;
+  min-width: 240px;
+  display: block;
+  height: 50px;
+  border-radius: 5px;
+  background: linear-gradient(to right, white 35%, whitesmoke 100%);
+  margin: 20vh auto;
+  padding: 15px 25px 0 40px;
+  color: darkslategray;
+  box-shadow: 1px 2px 1px -1px #777;
+  transition: background 200ms ease-in-out;
+}
+.box:hover {
+  background: linear-gradient(to right, #abbd73 0%, #abbd73 100%);
+}
+
+.shadow {
+  position: relative;
+  display: none;
+}
+.shadow:before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 13px;
+  right: 7px;
+  width: 25%;
+  top: 0;
+  box-shadow: 0 15px 10px #777;
+  transform: rotate(4deg);
+  transition: all 150ms ease-in-out;
+}
+.shadow:hover::before {
+  transform: rotate(0deg);
+  bottom: 20px;
+  z-index: -10;
+}
+
+.circle {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 0 0 0 25px antiquewhite;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.cookie {
+  max-width: 330px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cookie-open {
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+.cookie-open:hover {
+  animation-play-state: paused;
 }
 
 @media screen and (min-width: 320px) and (max-width: 1026px) {
