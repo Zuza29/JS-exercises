@@ -2,7 +2,7 @@ const item1 = document.querySelector('.item1');
 const item2 = document.querySelector('.item2');
 const arrowBtn = document.querySelector('body > div > section > button');
 const arrowImg = document.querySelector('body > div > section > button > div');
-const buttonControls = document.querySelector('.buttons');
+const buttonControls = document.querySelector('.button-container');
 let imgSize = 300;
 
 const scroll = () => {

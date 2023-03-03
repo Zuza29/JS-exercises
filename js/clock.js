@@ -44,4 +44,5 @@ const currentDate = () => {
 };
 
 currentDate();
-currentTime();
+setInterval(currentTime, 1000);
+
