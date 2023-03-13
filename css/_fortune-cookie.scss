@@ -10,7 +10,7 @@ $color_1: darkslategray;
     border-radius: 5px;
     background: linear-gradient(to right, white 35%, whitesmoke 100%);
     margin: 20vh auto;
-    color: darkslategray;
+    color: $color_1;
     box-shadow: 1px 2px 1px -1px #777;
     transition: background 200ms ease-in-out;
 	& p {

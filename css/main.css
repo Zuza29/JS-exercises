@@ -236,7 +236,7 @@ button:hover {
 }
 
 .arrow {
-  background-image: url("/svg/down-arrow-5.svg");
+  background-image: url("../svg/down-arrow-5.svg");
   width: 7vh;
   height: 7vh;
   margin: 0 auto;
@@ -251,12 +251,12 @@ button:hover {
 }
 
 .plus-img {
-  background-image: url("/svg/plus.svg");
+  background-image: url("../svg/plus.svg");
   fill: white;
 }
 
 .minus-img {
-  background-image: url("/svg/minus.svg");
+  background-image: url("../svg/minus.svg");
 }
 
 .image {
